@@ -19,7 +19,7 @@ fn main() {
     const NEW_VAR: u32 = 60;
     println!("{}", NEW_VAR);
 
-    const NEW_STR: str =  "Gulati";
+    const NEW_STR: &str =  "Gulati";
     println!("{}",NEW_STR)
 }
 
