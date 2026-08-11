@@ -12,4 +12,12 @@ fn main() {
 
     let strr: &str = "Go gulati Go!";
     println!("{}",strr);
+    tup()
+}
+
+fn tup() {
+    let mut tup: (i32, i32, &str, bool) = (1, 3, "hello", true);
+    tup.2 = "Gulati";
+    println!("{:?}",tup);
+    println!("{}",tup.1)
 }
