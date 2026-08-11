@@ -8,7 +8,8 @@ fn main() {
 
     println!("Hello Mr. {}",input);
     // int();
-    bool();
+    // bool();
+    float();
 
 }
 
@@ -33,4 +34,15 @@ fn bool() {
     let answer: bool = input.trim().parse().expect("Enter a boolean Value");
 
     println!("Yes, that's {}",answer);
+}
+
+fn float() {
+    println!("How much rupees are there in 1 dollar?");
+
+    let mut input = String::new();
+
+    io::stdin().read_line(&mut input).expect("failed to read a line");
+
+    let value : f32 = input.trim().parse().expect("Enter a float value");
+    println!("It's, {}",value);
 }
