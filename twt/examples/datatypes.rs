@@ -12,7 +12,8 @@ fn main() {
 
     let strr: &str = "Go gulati Go!";
     println!("{}",strr);
-    tup()
+    tup();
+    arr();
 }
 
 fn tup() {
@@ -20,4 +21,11 @@ fn tup() {
     tup.2 = "Gulati";
     println!("{:?}",tup);
     println!("{}",tup.1)
+}
+
+fn arr() {
+    let mut arr: [i32; 5] = [10, 20, 30, 40, 50];
+    arr[3] = 60;
+    println!("{:?}",arr);
+    println!("{}",arr[2]);
 }
