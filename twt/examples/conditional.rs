@@ -17,7 +17,9 @@ fn control_flow() {
     let food = "cookie";
 
     if food != "cookie" {
-        println!("I love cookie.");
+        println!("I love cookies.");
+    } else if food == "cookie" {
+        println!("You have cookies, please give it to me.");
     } else {
         println!("Where are cookies?");
     }
