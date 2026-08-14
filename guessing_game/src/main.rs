@@ -16,14 +16,26 @@ fn main() {
         .read_line(&mut guess)
         .expect("Enter a guess");
 
-    let guessed_number: i32 = guess.trim().parse().expect("Guessed Number");
+    let guessed_number: u32 = guess.trim().parse().expect("Guessed Number");
 
     println!("You guessed: {guessed_number}");
 
-    match guessed_number.cmp(&secret_number) {
-        Ordering::Less => println!("Too less!"),
-        Ordering::Greater => println!("Too greater"),
-        Ordering::Equal => println!("Right Guess!!!")
+    // match guessed_number.cmp(&secret_number) {
+    //     Ordering::Less => println!("Too less!"),
+    //     Ordering::Greater => println!("Too greater"),
+    //     Ordering::Equal => println!("Right Guess!!!")
+    // }
+
+    if guessed_number > 20 || guessed_number < 1 {
+        println!("Guess in Range!!!")
+    } else if guessed_number == secret_number {
+        println!("Right guess!")
+    } else if guessed_number > secret_number {
+        println!("Too high, Guess smaller")
+    } else if guessed_number < secret_number {
+        println!("Too small, Guess higher")
+    } else {
+        println!("keep trying.")
     }
 
 }
