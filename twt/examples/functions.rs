@@ -2,9 +2,10 @@ use std::io;
 
 fn main() {
     println!("Functions:");
-    // addition();
+    addition();
     // concatenation();
     subtraction();
+    multiplication(34, 67);
 }
 
 // concatenation isn't possible in rust
@@ -44,3 +45,10 @@ fn subtraction() {
 
     
 }
+
+fn multiplication(c: i64, d: i64) {
+    let mul = c * d;
+    println!("Multiplication: {}",mul);
+}
+
+
