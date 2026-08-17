@@ -17,7 +17,9 @@ fn main() {
     // let nums = [10,5,20,14,9];
     // println!("{:?}",second_largest(&nums));
 
-    ques1();
+    // ques1();
+
+    cel_to_fahrenheit(54.0);
 }
 
 fn is_prime(x: u32) -> bool{
@@ -100,4 +102,9 @@ fn ques1() {
         count+=i
     }
     println!("Count: {}",count);
+}
+
+fn cel_to_fahrenheit(c: f64) {
+    let f: f64 = c * 9.0/5.0 + 32.0;
+    println!("Fahrenheit: {}",f);
 }
