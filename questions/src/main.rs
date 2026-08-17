@@ -19,7 +19,13 @@ fn main() {
 
     // ques1();
 
-    cel_to_fahrenheit(54.0);
+    // cel_to_fahrenheit(54.0);
+
+    // ques4
+    let nums = [1,5,6,87,67,99,100];
+    for i in nums {
+        println!("{} is {}", i, even_or_odd(i))
+    }
 }
 
 fn is_prime(x: u32) -> bool{
@@ -107,4 +113,12 @@ fn ques1() {
 fn cel_to_fahrenheit(c: f64) {
     let f: f64 = c * 9.0/5.0 + 32.0;
     println!("Fahrenheit: {}",f);
+}
+
+fn even_or_odd(n: i32) -> &'static str {
+    if n % 2 == 0 {
+        return "Even"
+    } else {
+        return "Odd"
+    }
 }
