@@ -10,8 +10,14 @@ fn main() {
     // }
 
     // ques2
-    let primes = sieve_of_eratosthenes(30);
-    println!("{:?}",primes)
+    // let primes = sieve_of_eratosthenes(30);
+    // println!("{:?}",primes)
+
+    // ques3
+    // let nums = [10,5,20,14,9];
+    // println!("{:?}",second_largest(&nums));
+
+    ques1();
 }
 
 fn is_prime(x: u32) -> bool{
@@ -72,5 +78,26 @@ fn sieve_of_eratosthenes(n: usize) -> Vec<usize> {
         .collect()
 }
 
+fn second_largest(nums: &[i32]) -> Option<i32> {
+    let mut largest = None;
+    let mut second = None;
 
+    for &num in nums {
+        if largest.is_none() || num > largest.unwrap() {
+            second = largest;
+            largest = Some(num);
+        } else if num < largest.unwrap() && (second.is_none() || num > second.unwrap()) {
+            second = Some(num);
+        }
+    }
+    second
+}
 
+fn ques1() {
+    let mut count = 0;
+
+    for i in 1..=3 {
+        count+=i
+    }
+    println!("Count: {}",count);
+}
